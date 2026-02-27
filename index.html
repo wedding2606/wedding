@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lobster&display=swap" rel="stylesheet">
 <!-- Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest"></script>
 <!-- EmailJS -->
@@ -57,7 +57,6 @@ letter-spacing: 0.02em;
 text-align: center;
 max-width: 900px;
 padding: 0 20px;
-margin-bottom: 80px;
 line-height: 1.6;
 animation: fadeInDown 0.8s ease 0.3s both;
 }
@@ -70,7 +69,7 @@ animation: fadeInDown 0.8s ease 0.3s both;
     filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
     animation: fadeInUp 0.6s ease 0.8s both;
     z-index: 10000;
-    margin-bottom: 150px;
+    margin-bottom: 220px;
 }
 .wax-seal-btn:hover {
     transform: scale(1.04);
@@ -533,7 +532,7 @@ color: #622824;
 .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px 20px; }
 .d-item { background: rgba(255,255,255,0.94); border: 1px solid #E1CABA; border-radius: 12px; padding: 18px 20px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); transition: transform .2s ease, box-shadow .2s ease; }
 .d-item:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(0,0,0,0.08); }
-.d-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #51372A; margin-bottom: 6px; }
+.d-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #51372A; margin-bottom: 6px; font-weight: bold }
 .d-text { color: #786859; font-size: 16px; line-height: 1.65; }
 @media (max-width: 768px) { .d-item { padding: 16px; } }
 
@@ -668,7 +667,9 @@ font-size: 16px;
 </head>
 <body>
 <!-- НАЧАЛЬНЫЙ ЭКРАН -->
+
 <div id="splash-screen">
+<p class="splash-quote great-vibes" style="margin: 0 0 100px 0; font-weight: bold; font-size: clamp(2rem, 5vw, 3rem);">Евгений и Валерия</p>
 <p class="splash-quote great-vibes">
 Счастье - это когда ты нашел того,<br>кто искал тебя
 </p>
@@ -687,15 +688,17 @@ font-size: 16px;
 </button>
 </div>
 <!-- СЕКЦИЯ 1: ПРИГЛАШЕНИЕ -->
-<section style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding-top: 100px;">
+<section style="display: flex; align-items: center; justify-content: center; min-height: 100vh; padding-top: 30px;">
 <div class="section-bg" style="background: linear-gradient(rgba(255, 251, 245, 0.55), rgba(225, 202, 186, 0.3)), url('first.webp'); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: scroll;"></div>
 <div class="section-content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+
 <div class="divider">
 <div class="divider-line"></div>
 <i data-lucide="heart" class="divider-icon"></i>
 <div class="divider-line reverse"></div>
 </div>
-<h1 class="great-vibes" style="margin: 0 0 22px 0;">Евгений & Валерия</h1>
+
+<!-- <h1 class="great-vibes" style="margin: 0 0 100px 0; font-weight: bold;">Евгений и Валерия</h1> -->
 <h1 class="great-vibes" style="margin: 0 0 32px 0;">Приглашаем вас</h1>
 <div class="card" style="text-align: center; max-width: 700px; width: 100%;">
 <p style="color: #51372A; font-size: clamp(1.1rem, 2.5vw, 1.4rem); margin-bottom: 40px; line-height: 1.8; font-weight: 300;">
@@ -879,7 +882,7 @@ font-size: 16px;
 </section>
 <!-- СЕКЦИЯ 5: ДЕТАЛИ -->
 <section style="display: grid; align-items: center; justify-content: center;">
-<div class="section-bg" style="background: linear-gradient(rgba(255, 255, 255, 69%), rgba(225, 202, 186, 0)), url('table.jpg');"></div>
+<div class="section-bg" style="background: linear-gradient(rgba(255, 255, 255, 70%), rgba(225, 202, 186, 0)), url('table.jpg');"></div>
 <div class="section-content">
 <div class="divider">
 <div class="divider-line"></div>
@@ -894,7 +897,7 @@ font-size: 16px;
       <div class="d-text">Свои теплые слова и пожелания приносите в сердцах, а подарки — в конвертах.</div>
     </div>
     <div class="d-item">
-      <div class="d-title">Цветы</div>
+      <div class="d-title" style="font-weight: 200px;">Цветы</div>
       <div class="d-text">Просим не дарить цветы — сразу после свадьбы мы улетаем и не успеем насладиться их красотой.</div>
     </div>
     <div class="d-item">
@@ -920,7 +923,7 @@ font-size: 16px;
 <h2 class="great-vibes">Анкета</h2>
 <form class="card" id="weddingForm" onsubmit="submitForm(event)">
 <div class="form-group">
-<label class="form-label" style="font-size: 15px; margin-bottom: 4%;">Пожалуйста, подтвердите ваше присутствие на нашем празднике до  15 марта любым удобным для вас способом.</label>
+<label class="form-label" style="font-size: 15px; margin-bottom: 4%;">Подтверди, Пожалуйста, Ваше/ваше присутствие на нашем празднике до  15 марта любым удобным для вас способом.</label>
 <label class="form-label">Ваша фамилия и имя:</label>
 <input type="text" class="form-input" name="fullName" required placeholder="Иванов Иван">
 </div>
