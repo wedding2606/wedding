@@ -669,7 +669,7 @@ font-size: 16px;
 <!-- НАЧАЛЬНЫЙ ЭКРАН -->
 
 <div id="splash-screen">
-<p class="splash-quote great-vibes" style="margin: 0 0 100px 0; font-weight: bold; font-size: clamp(2rem, 5vw, 3rem);">Евгений и Валерия</p>
+<img src="logo.png" style="max-width: 250px; margin-bottom: 50px;">
 <p class="splash-quote great-vibes">
 Счастье - это когда ты нашел того,<br>кто искал тебя
 </p>
@@ -699,7 +699,7 @@ font-size: 16px;
 </div>
 
 <!-- <h1 class="great-vibes" style="margin: 0 0 100px 0; font-weight: bold;">Евгений и Валерия</h1> -->
-<h1 class="great-vibes" style="margin: 0 0 32px 0;">Приглашаем вас</h1>
+<h1 class="great-vibes" style="margin: 0 0 32px 0;">Приглашаем</h1>
 <div class="card" style="text-align: center; max-width: 700px; width: 100%;">
 <p style="color: #51372A; font-size: clamp(1.1rem, 2.5vw, 1.4rem); margin-bottom: 40px; line-height: 1.8; font-weight: 300;">
 на торжество, посвященное нашей свадьбе.<br>
@@ -906,7 +906,7 @@ font-size: 16px;
     </div>
     <div class="d-item">
       <div class="d-title">«Горько»</div>
-      <div class="d-text">Будем признательны, если вы воздержитесь от криков «Горько». Поцелуй - знак чувств, он не может быть по заказу</div>
+      <div class="d-text">Будем признательны, если вы воздержитесь от криков «Горько». Поцелуй — знак чувств, а не по заказу.</div>
     </div>
   </div>
 </div>
@@ -923,7 +923,7 @@ font-size: 16px;
 <h2 class="great-vibes">Анкета</h2>
 <form class="card" id="weddingForm" onsubmit="submitForm(event)">
 <div class="form-group">
-<label class="form-label" style="font-size: 15px; margin-bottom: 4%;">Пожалуйста, подтвердите ваше присутствие на нашем празднике до 15 марта.</label>
+<label class="form-label" style="font-size: 15px; margin-bottom: 4%;">Подтверди, Пожалуйста, Ваше/ваше присутствие на нашем празднике до  15 марта любым удобным для вас способом.</label>
 <label class="form-label">Ваша фамилия и имя:</label>
 <input type="text" class="form-input" name="fullName" required placeholder="Иванов Иван">
 </div>
@@ -943,16 +943,7 @@ font-size: 16px;
 <div id="attendingFields">
 <div class="form-group">
 <label class="form-label">Количество человек:</label>
-<div class="radio-group">
-<label class="radio-item">
-<input type="radio" name="guestCount" value="1" checked>
-<span>1</span>
-</label>
-<label class="radio-item">
-<input type="radio" name="guestCount" value="2">
-<span>2</span>
-</label>
-</div>
+<input type="number" name="guestCount" value="1" min="1" class="form-input">
 </div>
 <div class="form-group">
 <label class="form-label">Что предпочитаете из алкоголя:</label>
@@ -1010,7 +1001,7 @@ font-size: 16px;
 </div>
 </div>
 <div id="alcoholOtherGroup" class="hidden" style="margin-bottom: 30px;">
-<input type="text" class="form-input" name="alcoholOtherText" placeholder="Уточните, пожалуйста...">
+  <input type="text" class="form-input" name="alcoholOtherText" placeholder="Уточните, пожалуйста...">
 </div>
 <div class="form-group">
 <label class="form-label">Есть ли у вас пищевые аллергии:</label>
